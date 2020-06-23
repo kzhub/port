@@ -1,0 +1,599 @@
+/*共通css*/
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav{
+  padding-left: 70%;
+  padding-bottom: 2rem;
+  margin-right: 5%;
+}
+.wid{
+  width: 80%;
+  margin: 0 auto;
+}
+.ar1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3rem;
+
+}
+.waku{
+  padding: 4rem;
+}
+
+.tai{
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+#tool{
+  color: rgb(102, 102, 102);
+}
+#top{
+  margin-top: 1rem;
+}
+
+body {
+margin: 0px auto;
+padding: 0px;
+text-align: center;
+font-size: 16px;/*rem指定のための基準サイズ */
+}
+p{
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  color: #484848;
+}
+
+
+li{
+  font-family: 'Lato', sans-serif;
+  display: inline;
+  font-size: 0.9rem;
+
+  margin: 1rem;
+}
+#cross{
+  margin-top:4rem;
+  margin-left: 100%;
+    cursor: pointer;
+}
+.img_wrap{
+  margin: 0 auto;
+  overflow: hidden;
+}
+.img_wrap img{
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.img_wrap:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+a:link { color: #696969; }
+a:visited { color: #696969; }
+a:hover { color: #008080 ;}
+a:active {color: #008080 ;}
+
+/*hover line */
+.line {
+  display: inline-block;
+  padding-bottom: 4px;
+  position: relative;
+}
+.line::after {
+  background-color: tomato;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: .5s all;
+  width: 0;
+}
+
+.line:hover::after {
+  width: 100%;
+}
+
+img#logo{
+  width:48%;
+  min-width: 170px;
+  margin-bottom: 7rem;
+  margin-top: 4rem;
+  text-align: left;
+
+}
+
+img{
+  width: 78%;
+}
+
+header{
+  margin-top:1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+main{
+  background-color: rgb(247, 247, 247);
+}
+
+section#galla {
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:8%;
+}
+
+
+section#galla article {
+  width:27%;
+  margin-bottom: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  line-height: 150%;
+  overflow: hidden;
+}
+
+section#galla img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+section#galla img:hover {
+	transform: scale(1.01, 1.01);
+}
+
+
+
+footer{
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+div#sns  a{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+p#from{
+  margin-bottom: 3.5rem;
+  font-family: 'Raleway', sans-serif;
+  color: #008080;
+}
+
+div.movie{
+  margin-bottom: 8rem;
+}
+
+
+div.livesec{
+
+
+}
+
+div.consec{
+  background-color: #white;
+  height: auto;
+}
+
+img.mokuzi{width: 20%;
+  max-width: 190px;
+  min-width: 100px;
+margin-top: 1rem;
+padding-bottom: 0.6rem;
+border-bottom: 1.2px solid #333333;
+}
+img.mokuzi2{width: 7%;
+  max-width: 190px;
+margin-top: 1rem;
+min-width: 50px;
+padding-bottom: 0.6rem;
+border-bottom: 1.2px solid white;
+}
+
+div#mailbox{
+  margin: 5rem;
+}
+
+div.livesec ul{
+  margin-top: 1rem;
+  color: #c6c6c6;
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+div.day{
+  margin: 5%;
+}
+
+
+
+div#mask {
+  cursor: pointer;
+  display: none;
+  background: rgba(186, 186, 186, 0.45);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal2 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal3 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal4 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal5 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal6 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal7 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal8 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal9 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal10 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal11 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal12 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal13 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+
+#modal14 {
+  display: none;
+  background: #fff;
+  color: #555;
+  width: 80%;
+  height: 80%;
+  padding: 3%;
+  border-radius: 3px;
+  position: fixed;/* 重要*/
+	top: 50%;/* 重要*/
+	left: 50%;/* 重要*/
+	transform: translate(-50%, -50%);/* 重要*/
+  margin: 0 ;
+  z-index: 2;
+  transition: 0.4s;
+  text-align: center;
+  overflow: scroll;/* scroll css */
+  height: 100vh; /* scroll css */
+}
+.point{
+  cursor: pointer;
+  animation: fadeIn 2s ease 0s 1 normal;
+  border-radius: 2px;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+
+p #mail{
+  border: solid black;
+}
+
+.fa-chevron-circle-up{
+  position: fixed;
+  top:90%;
+  left: 90%;
+}
+
+.cate{
+  text-align: left;
+}
+
+i{
+  padding-right: 0.3rem;
+}
+
+.mida{
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #333333;
+    margin: 0.3rem;
+  padding-top: 5rem;
+  text-align: left;
+  margin-left: 6rem;
+
+}
+
+
+@media screen and (max-width: 1200px) {
+  .nav{
+    padding-left: 60%;
+    padding-bottom: 2rem;
+    margin-right: 5%;
+  }
+  section#galla article {
+    width: 300px;
+  }
+  section#galla {
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left:0%;
+  }
+
+  section#galla article {
+    margin-left: none;
+    margin-right: none;
+  }
+.mida{
+  margin-left:6%;
+}
+img{
+  width:100%;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .nav{
+    padding-left: 0%;
+    padding-bottom: 2rem;
+    margin-right: 0%;
+  }
+  li{
+
+    margin-bottom: 0.6rem;
+  }
+  img#logo{
+    width:80%;
+    min-width: 170px;
+  }
+  header{
+    margin-top:2rem;
+  }
+
+}
